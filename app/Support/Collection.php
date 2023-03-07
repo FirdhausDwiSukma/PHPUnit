@@ -4,9 +4,9 @@ namespace App\Support;
 
 class Collection{
     
-    protected $items;
+    protected $items = [];
     
     public function get(){
-
+        return $this->items;
     }
 }
