@@ -32,4 +32,11 @@ final class CollectionTest extends TestCase{
         $this->assertEquals($collection->get()[0], 'one');
         $this->assertEquals($collection->get()[1], 'two');
     }
+
+    /** @test */
+    public function collection_is_instance_of_iterator_aggregate(){
+        $collection = new Collection;
+
+        $this->assertInstanceOf(IteratorAggregate::class, $collection);
+    }
 }
