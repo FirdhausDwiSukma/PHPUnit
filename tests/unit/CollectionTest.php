@@ -4,6 +4,7 @@ use App\Support\Collection;
 use PHPUnit\Framework\TestCase;
 
 final class CollectionTest extends TestCase{
+
     /** @test */
     public function empty_instantiated_collection_returns_no_items()
     {
@@ -19,5 +20,14 @@ final class CollectionTest extends TestCase{
         ]);
 
         $this->assertEquals(3, $collection->count());
+    }
+
+    /** @test */
+    public function items_returned_match_items_passed_in(){
+        $collection = new Collection([
+            'one', 'two'
+        ]);
+
+        $this->assertCount(2, $collection->get());
     }
 }
