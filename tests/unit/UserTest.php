@@ -28,4 +28,16 @@ final class UserTest extends TestCase{
 
         $this->assertEquals($user->getFullName(), 'usdhaus Garrett');
     }
+
+    public function testFirstAndLastNameAreTrimmed()
+    {
+        $user = new User;
+
+        $user->setFirstName(' usdhaus    ');
+        $user->setLastName('    Garrett');
+        
+        $this->assertEquals($user->getFirstName(), 'usdhaus');
+        $this->assertEquals($user->getLastName(), 'Garrett');
+
+    }
 }
