@@ -40,4 +40,12 @@ final class UserTest extends TestCase{
         $this->assertEquals($user->getLastName(), 'Garrett');
 
     }
+
+    public function testEmailAddressCanBeSet()
+    {
+        $user = new User;
+        $user->setEmail('usdhaus@example.com');
+
+        $this->assertEquals($user->getEmail(), 'usdhaus@example.com');
+    }
 }

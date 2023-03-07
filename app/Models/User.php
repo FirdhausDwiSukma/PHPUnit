@@ -5,6 +5,7 @@ namespace App\Models;
 class User{
     public $first_name;
     public $last_name;
+    public $email;
 
     public function setFirstName($firstName){
         $this->first_name = trim($firstName);
@@ -27,5 +28,14 @@ class User{
     {
         //return $this->first_name . ' ' . $this->last_name;
         return "$this->first_name $this->last_name";
+    }
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
     }
 }
