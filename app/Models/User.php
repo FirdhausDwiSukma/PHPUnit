@@ -10,6 +10,6 @@ class User{
     }
 
     public function getFirstName(){
-        return 'usdhaus';
+        return $this->first_name;
     }
 }
